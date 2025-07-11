@@ -172,7 +172,7 @@ export default function CreateOrder() {
       />
 
       {showSummary && (
-        <View style={styles.summaryBox.PadreBoton}>
+        <View style={styles.summaryBox}>
           <Text style={styles.summaryTitle}>Resumen de la Orden</Text>
           {order.garments.map((garment, gIndex) => (
             <View key={gIndex} style={styles.summaryItem}>
