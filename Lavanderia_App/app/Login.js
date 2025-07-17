@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, View, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { Text, StyleSheet, View, TextInput, TouchableOpacity, Alert, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Login() {
@@ -33,6 +33,7 @@ export default function Login() {
     };
 
     return (
+    <ScrollView>
         <View style={styles.padre}>
             <View style={styles.tarjeta}>
                 <Text style={styles.title}>
@@ -79,7 +80,19 @@ export default function Login() {
                     </TouchableOpacity>
                 </View>
             </View>
+
+            <View style={styles.tarjeta}>
+                <Text style={styles.title}>
+                    CRUD de Servicio y Prendas (REMEDIAL)
+                </Text>
+                <View style={styles.PadreBoton}>
+                    <TouchableOpacity style={styles.cajaBoton} onPress={() => navigation.navigate('Garments_Services_CRUD')}>
+                        <Text style={styles.TextoBoton}>Ir al CRUD</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
+            </View>
+    </ScrollView>
     );
 }
 

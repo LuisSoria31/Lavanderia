@@ -9,6 +9,8 @@ import Crear_Clientes from './app/Crear_Clientes';
 import Mostrar_Usuarios from './app/Mostrar_Usuarios';
 import Actualizar_Usuarios from './app/Actualizar_Usuarios';
 import Actualizar_Clientes from './app/Actualizar_Clientes';
+import Crear_Orden from './app/Garments_Services_CRUD';
+import CRUD from './app/Garments_Services_CRUD';
 
 const Stack = createStackNavigator();
 
@@ -46,7 +48,11 @@ export default function App() {
         />
         <Stack.Screen
         name="Crear_Orden"
-        component={Crear_Orden}
+        component={CreateOrder}
+        />
+         <Stack.Screen
+        name="Garments_Services_CRUD"
+        component={BasicLaundryApp}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+import { useNavigation } from '@react-navigation/native';
 
 const constants = {
   garments: ['Camisa', 'Pantalón', 'Falda'],
@@ -18,7 +19,7 @@ const defaultGarment = {
   services: [constants.services[0]],
 };
 
-export default function CreateOrder() {
+export default function Crear_Orden() {
   const [order, setOrder] = useState({
     client_id: 0,
     user_id: 0,
@@ -27,6 +28,8 @@ export default function CreateOrder() {
     pagado: false,
     garments: [defaultGarment],
   });
+
+  const navigation = useNavigation();
 
   const [total, setTotal] = useState(0);
   const [showSummary, setShowSummary] = useState(false);
